@@ -23,7 +23,7 @@ fn main() {
     loop {
         let hydration = hydrater();
         let initc = Utc::now();
-        let _conn = match hydration  {
+        match hydration  {
             Ok(()) => (),
             Err(error) => panic!("{} Problem connecting to redis: {:?}", initc, error),
         };
